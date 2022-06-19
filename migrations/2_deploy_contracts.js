@@ -1,5 +1,6 @@
-//Import Contractconst DStorage = artifacts.require("DStorage");
+// Import Contract
+const Storage = artifacts.require("Storage");
 
-module.exports = function(deployer) {
-	//Deploy Contract
+module.exports = function (deployer) {
+  deployer.deploy(Storage);
 };
