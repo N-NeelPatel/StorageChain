@@ -1,2 +1,3 @@
+## ``` Decentralized File Storage. ```
 # StorageChain
-A blockchain based storage application
+A blockchain based storage application.
