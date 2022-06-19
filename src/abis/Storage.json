@@ -4447,9 +4447,73 @@
     "name": "solc",
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "1337": {
+      "events": {
+        "0x6e95bbaa37a5fdec42a312e049dea2fe6160ebe659214d3409b4f91f164c2f52": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "fileId",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "fileHash",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "fileSize",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "fileType",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "fileName",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "fileDescription",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "uploadTime",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "address payable",
+              "name": "uploader",
+              "type": "address"
+            }
+          ],
+          "name": "FileUploaded",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x215C1cB47E542b940f5b4343F63deAF5B8B39900",
+      "transactionHash": "0x85415746476dae7c33e905682e6d45d319d60395aed5b00317db7f4a421e880a"
+    }
+  },
   "schemaVersion": "3.2.3",
-  "updatedAt": "2022-06-18T13:39:06.579Z",
+  "updatedAt": "2022-06-19T08:30:28.843Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
