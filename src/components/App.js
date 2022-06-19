@@ -44,16 +44,16 @@ class App extends Component {
     const networkId = await web3.eth.net.getId();
     const networkData = Storage.networks[networkId];
     if (networkData) {
-      const Storage = new web3.eth.Contract(Storage.abi, networkData.address);
-      this.setState({ Storage });
-      console.log(Storage);
+      const storage = new web3.eth.Contract(Storage.abi, networkData.address);
+      this.setState({ storage });
+      console.log(storage);
 
       // get files amount
-      const filesCount = await Storage.methods.fileCount().call();
+      const filesCount = await storage.methods.fileCount().call();
       this.setState({ filesCount });
       // load files and sort by newest
       for (let i = filesCount; i >= 1; i--) {
-        const file = await Storage.files(i).call();
+        const file = await storage.files(i).call();
         this.setState({
           files: [...this.state.files, file],
         });
@@ -96,7 +96,7 @@ class App extends Component {
       if (this.state.type === "") {
         this.setState({ type: "none" });
       }
-      this.state.Storage.methods
+      this.state.storage.methods
         .uploadFile(
           result[0].hash,
           result[0].size,
